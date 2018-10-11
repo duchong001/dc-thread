@@ -9,4 +9,5 @@ public class Adapter extends OldClass implements NewInterface {
     public void target() {
         super.old();
     }
+
 }
