@@ -2,6 +2,7 @@ package com.duchong.java8;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author DUCHONG
@@ -38,5 +39,11 @@ public class LambdaTest2 {
                 .map(Employee::getName)
                 .distinct()
                 .forEach(System.out::println);
+
+        //获取唯一性的Name列表
+        List<String> employeeList=employees.stream()
+                                            .map(Employee::getName)
+                                            .distinct()
+                                            .collect(Collectors.toList());
     }
 }
