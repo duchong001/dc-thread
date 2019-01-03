@@ -15,7 +15,7 @@ public class TestVolatile {
 		new Thread(td).start();
 
 		while(true){
-			if(td.isFlag()){
+			if(td.getFlag()){
 				System.out.println("------------------");
 				break;
 			}
@@ -32,23 +32,20 @@ class ThreadDemo implements Runnable {
 	@Override
 	public void run() {
 
-//		try {
-//			Thread.sleep(200);
-//		} catch (InterruptedException e) {
-//		}
+		try {
+			Thread.sleep(200);
+		} catch (InterruptedException e) {
+		}
 
 		flag = true;
 
-		System.out.println("flag=" + isFlag());
+		System.out.println("flag=" + getFlag());
 
 	}
 
-	public boolean isFlag() {
+	public boolean getFlag() {
 		return flag;
 	}
 
-	public void setFlag(boolean flag) {
-		this.flag = flag;
-	}
 
 }

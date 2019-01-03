@@ -26,13 +26,9 @@ public class CallableMain {
 
         new Thread(futureTask).start();
 
-        while (true){
-            Integer callResult=futureTask.get();
-              if(callResult==5050){
-                  System.out.println(callResult);
-                  break;
-              }
-        }
+        Integer callResult=futureTask.get();
+
+        System.out.println(callResult);
     }
 }
 
