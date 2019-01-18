@@ -35,7 +35,7 @@ public class TestAtomicDemo {
 
 class AtomicDemo implements Runnable{
 
-//	private volatile int serialNumber = 0;
+	//private volatile int serialNumber = 0;
 
 	private AtomicInteger serialNumber = new AtomicInteger(0);
 
